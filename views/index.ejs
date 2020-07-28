@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="container">
+      <%  allJokes.forEach((i,ele)=>{%>
+            <div>
+                <h2>Joke#<%=i%></h2>
+                <h3><%ele.type%></h3>
+                <h4><%=ele.setup%></h4>
+                <p><%=ele.punchline%></p>
+                <form action="/add" method="post">
+                <input type="hidden" name="type" value="<%ele.type%>">
+                <input type="hidden" name="setup" value="<%=ele.setup%>">
+                <input type="hidden" name="punchline" value="<%=ele.punchline%>">
+                <input type="submit" value="ADD TO MY JOKS LIST">
+                </form>
+            </div>
+       <% })%>
+    </section>
+</body>
+</html>
