@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>fav</title>
+
+    <title>form</title>
 </head>
 <body>
     <header>
@@ -15,14 +16,19 @@
         </ul>
     </header>
     <section id="container">
-        <%  myJokes.forEach((ele)=>{%>
+        <%  joke.forEach((ele)=>{%>
               <div>
-                 
                   <h3><%ele.type%></h3>
                   <h4><%=ele.setup%></h4>
                   <p><%=ele.punchline%></p>
-                  <form action="/detailes/<%=ele.id%>" method="post">
-                  <input id="btn" type="submit" value="VIEW DETAILES">
+                  <form action="/delet/<%=ele.id%>?_method=delete" method="post">
+                <input id="btn" type="submit" value="Delete">
+                </form>
+                  <form action="/updatejoke/<%=ele.id%>?_method=put" method="post">
+                  <input type="text" name="type" value="<%=ele.type%>">
+                  <input type="text" name="setup" value="<%=ele.setup%>">
+                  <input type="text" name="punchline" value="<%=ele.punchline%>">
+                  <input id="btn" type="submit" value="UPDATE">
                   </form>
               </div>
          <% })%>

@@ -1,0 +1,36 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+#container div{
+    text-align: center;
+    box-shadow: 0 0 10px black;
+    width: 30%;
+    height: 200px;
+    margin: 20px;
+}
+header{
+    background-color: rgb(106, 56, 153);
+    height: 300px;
+}
+header ul{
+    background-color:rgb(36, 31, 31);
+}
+header ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+header ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#btn{
+    background-color: rgb(106, 56, 153);
+    color:#fff;
+    font-weight: bolder;
+
+
+}
